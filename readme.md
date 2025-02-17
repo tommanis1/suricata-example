@@ -20,15 +20,13 @@ suricata -c /root/src/suricata.yaml -i wlp1s0
 ```
 Install the custom rules 
 ```
-
+suricata-update --local /root/src/rules.rules
 ```
 
 Now to trigger our rule we can include "virus" anywhere in a packet. Try running the following:
 ```
 curl -H "User-Agent: virus" http://example.com
 ```
-
-
 Looking at the output logs:
 ```
 tail /var/log/suricata/fast.log
