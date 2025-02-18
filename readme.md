@@ -16,7 +16,7 @@ docker run --rm -it \
 
 Now inside of the container start Suricata with the configuration in src/suricata.yaml:
 ```
-suricata -c /root/src/suricata.yaml -i wlp1s0 -D
+suricata -c /root/src/suricata.yaml -i {YOUR INTERFACE} -D
 ```
 Install the custom rules 
 ```
